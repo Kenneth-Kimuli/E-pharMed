@@ -92,11 +92,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        mCameraView.bindToLifecycle((LifecycleOwner) MainActivity.this);
-        //That's all for initialization. camera is ready.
-        //CameraView will automatically select main back and front camera if available
-        //When bound to MainActivity, you don't need to worry about closing or releasing camera.
-
         //take a picture
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,18 +157,34 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     public String getBatchDirectoryName() {
+        isExternalStorageReadable();
+        isExternalStorageWritable();
         String app_folder_path;
         if (android.os.Build.VERSION.SDK_INT >= 29) {
             app_folder_path = getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString();
         } else {
-            app_folder_path = Environment.getStorageDirectory().toString() + "/Camera";
+            app_folder_path = Environment.getExternalStorageDirectory().toString() + "/E-pharMed";
         }
 
         File dir = new File(app_folder_path);
         if (!dir.exists() && !dir.mkdirs()) {
+
         }
         return app_folder_path;
+    }
+
+    // Checks if a volume containing external storage is available
+    // for read and write.
+    private boolean isExternalStorageWritable() {
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+    }
+
+    // Checks if a volume containing external storage is available to at least read.
+    private boolean isExternalStorageReadable() {
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED) ||
+                Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED_READ_ONLY);
     }
 
 
