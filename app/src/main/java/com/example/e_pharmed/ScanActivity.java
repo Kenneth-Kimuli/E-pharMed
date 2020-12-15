@@ -35,7 +35,7 @@ import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class MainActivity extends AppCompatActivity {
+public class ScanActivity extends AppCompatActivity {
 
     public Button btnScan, btnCapture, btnExit;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_scan);
         if (allPermissionsGranted()) {
             startCamera();
         } else {
@@ -67,13 +67,14 @@ public class MainActivity extends AppCompatActivity {
         mCameraView = findViewById(R.id.view_finder);
         mCameraView.setFlash(ImageCapture.FLASH_MODE_AUTO);
         //can set flash mode to auto,on,off...
-        mCameraView.bindToLifecycle((LifecycleOwner) MainActivity.this);
+        mCameraView.bindToLifecycle((LifecycleOwner) ScanActivity.this);
         //That's all for initialization. camera is ready.
         //CameraView will automatically select main back and front camera if available
-        //When bound to MainActivity, you don't need to worry about closing or releasing camera.
+        //When bound to ScanActivity, you don't need to worry about closing or releasing camera.
         ImageCapture.Builder builder = new ImageCapture.Builder();
         //Vendor-Extensions (The CameraX extensions dependency in build.gradle)
         HdrImageCaptureExtender hdrImageCaptureExtender = HdrImageCaptureExtender.create(builder);
+
         // if has hdr (optional).
         if (hdrImageCaptureExtender.isExtensionAvailable(cameraSelector)) {
             // Enable hdr.

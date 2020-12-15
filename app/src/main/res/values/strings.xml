@@ -3,4 +3,26 @@
     <string name="exit">EXIT</string>
     <string name="capture">CAPTURE</string>
     <string name="scan">SCAN</string>
+    <string-array name="array_pharmacies">
+        <item>KNH Pharmacy</item>
+        <item>AgaKhan Pharmacy</item>
+        <item>Nairobi Womens Pharmacy</item>
+        <item>24hr Pharmacy</item>
+        <item>Mirrors Online Pharmacy</item>
+        <item>Malibu Pharmacy</item>
+        <item>Good life Pharmacy</item>
+        <item>Kam Pharmacy</item>
+        <item>Pharmart Pharmacy</item>
+        <item>Kilimanjaro Pharmacy</item>
+    </string-array>
+    <string-array name="array_medicine">
+        <item>Cough Syrup</item>
+        <item>Paracetamol</item>
+        <item>Panadol</item>
+        <item>Mara moja</item>
+    </string-array>
+    <string name="username">Username</string>
+    <string name="pwd">Password</string>
+    <string name="login">LOG IN</string>
+    <string name="forgotpwd">Forgot Password?</string>
 </resources>
