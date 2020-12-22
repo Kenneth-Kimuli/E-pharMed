@@ -16,14 +16,6 @@
             android:layout_alignParentTop="true"
             android:layout_above="@id/btnCapture"/>
 
-    <Button
-            android:id="@+id/btnScan"
-            android:layout_height="wrap_content"
-            android:layout_width="96dp"
-            android:text="@string/scan"
-            android:layout_below="@id/view_finder"
-            android:layout_alignParentBottom="true"
-            />
 
     <Button
             android:id="@+id/btnCapture"

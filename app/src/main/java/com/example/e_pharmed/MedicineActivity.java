@@ -33,10 +33,10 @@ public class MedicineActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                // TODO Auto-generated method stub
+
                 String value=adapter.getItem(position);
                 Toast.makeText(getApplicationContext(),value,Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MedicineActivity.this,ScanActivity.class));
+                startActivity(new Intent(MedicineActivity.this,PurchaseMed.class));
 
             }
         });

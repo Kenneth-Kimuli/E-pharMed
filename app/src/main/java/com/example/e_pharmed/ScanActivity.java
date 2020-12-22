@@ -37,15 +37,14 @@ import java.util.concurrent.Executors;
 
 public class ScanActivity extends AppCompatActivity {
 
-    public Button btnScan, btnCapture, btnExit;
+    public Button btnCapture, btnExit;
 
     private Executor executor = Executors.newSingleThreadExecutor();
-    CameraSelector cameraSelector;
     CameraView mCameraView;
 
     private int REQUEST_CODE_PERMISSIONS = 1001;
     private final String[] REQUIRED_PERMISSIONS = new String[]{"android.permission.CAMERA",
-            "android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.RECORD_AUDIO"};
+            "android.permission.WRITE_EXTERNAL_STORAGE"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +60,6 @@ public class ScanActivity extends AppCompatActivity {
 
     private void startCamera() {
         btnCapture = findViewById(R.id.btnCapture);
-        btnScan = findViewById(R.id.btnScan);
         btnExit = findViewById(R.id.btnExit);
 
         mCameraView = findViewById(R.id.view_finder);
@@ -73,15 +71,15 @@ public class ScanActivity extends AppCompatActivity {
         //When bound to ScanActivity, you don't need to worry about closing or releasing camera.
         ImageCapture.Builder builder = new ImageCapture.Builder();
         //Vendor-Extensions (The CameraX extensions dependency in build.gradle)
-        HdrImageCaptureExtender hdrImageCaptureExtender = HdrImageCaptureExtender.create(builder);
+        /*HdrImageCaptureExtender hdrImageCaptureExtender = HdrImageCaptureExtender.create(builder);
 
         // if has hdr (optional).
         if (hdrImageCaptureExtender.isExtensionAvailable(cameraSelector)) {
             // Enable hdr.
             hdrImageCaptureExtender.enableExtension(cameraSelector);
-        }
+        }*/
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+        /*if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -91,7 +89,7 @@ public class ScanActivity extends AppCompatActivity {
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
             return;
-        }
+        }*/
 
         //take a picture
         btnCapture.setOnClickListener(new View.OnClickListener() {

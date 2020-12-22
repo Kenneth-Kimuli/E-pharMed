@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "265289838688",
+    "project_id": "e-pharmed-3f028",
+    "storage_bucket": "e-pharmed-3f028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265289838688:android:89d6136a142f65ca5f9305",
+        "android_client_info": {
+          "package_name": "com.example.e_pharmed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265289838688-d1a9nuv0svup4k0djch33j4vjpfguf7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1BKU07_rl43y9k8dxDuPs_TEVzgWrXDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265289838688-d1a9nuv0svup4k0djch33j4vjpfguf7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

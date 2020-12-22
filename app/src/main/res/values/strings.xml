@@ -20,9 +20,15 @@
         <item>Paracetamol</item>
         <item>Panadol</item>
         <item>Mara moja</item>
+        <item>painkiller</item>
     </string-array>
     <string name="username">Username</string>
     <string name="pwd">Password</string>
     <string name="login">LOG IN</string>
     <string name="forgotpwd">Forgot Password?</string>
+    <string name="phoneNo">Phone Number</string>
+    <string name="Amount">Amount</string>
+    <string name="ID_No">ID Number</string>
+    <string name="PAddress">Postal Address</string>
+
 </resources>
